@@ -1,0 +1,125 @@
+/*For HC roulette page*/
+
+.genericextras {
+	color:#4ca9ff;
+}
+
+.missionextras {
+	color: greenyellow;
+}
+
+#chosenmission {
+	font-size:18px;
+	font-weight: bold;
+	color:#cc0000;
+}
+
+/* For the theme switch position, or else goes out of roulettesection */
+#roulettesection {
+	position: relative;
+	height:600px;
+}
+
+#popoutbutton {
+	position: absolute;
+	padding: 10px;
+	background-color: rgba(74, 74, 74, 0.75);
+	border-radius: 20px;
+	text-decoration: none;
+	top: 10px;
+	right: 10px;
+}
+
+/* Visual dark-light theme switch*/
+input#theme-switch {
+    position: absolute;
+	bottom:5px;
+	right:5px;
+    cursor: pointer;
+    appearance: none;
+    width: 80px;
+    height: 40px;
+    background-color: #ededed;
+    border-radius: 20px;
+    box-shadow:
+        inset 5px 5px 5px rgba(255,255,255,0.15),
+        5px 1px 2px rgba(0,0,0,0.25);
+}
+
+input#theme-switch::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    background-color: #323950;
+    border-radius: 40px;
+    transform: scale(0.8);
+    position: absolute;
+    left: 0;
+    transition: left 0.7s, background-image 0.7s;
+    background-image: url('../img/dark-icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    box-shadow:
+        inset 5px 5px 5px rgba(255,255,255,0.15),
+        5px 1px 2px rgba(0,0,0,0.25);
+}
+
+input#theme-switch:checked::after {
+    left: 40px;
+    background-image: url('../img/light-icon.png');
+}
+
+/* Turn light mode on when you click */
+body.light {
+	background-color: ivory;
+    color: white;
+}
+
+body.light section {
+	color: black;
+}
+
+body.light .missionextras {
+	color: #00a6a6;
+}
+
+body.light .genericextras {
+	color:#0000aa;
+}
+
+
+/* Light mode select style */
+body.light .hcselect {
+    background-color: #ededed;
+    color: #8a0000;
+    border-color: #8a0000;
+}
+
+body.light .hcselect option {
+    background-color: ivory;
+    color: #8a0000;
+}
+
+/* For light mode buttons */
+body.light .ui-button {
+    background-color: #8a0000;
+    color: #ffffff;
+}
+
+body.light .ui-button:hover {
+    background-color: #b00000;
+}
+
+/* Popout button styling */
+body.light #popoutbutton {
+    background-color: #8a0000;
+    color: #ffffff;
+    box-shadow:
+        inset 5px 5px 5px rgba(255,255,255,0.15),
+        5px 1px 2px rgba(0,0,0,0.25);
+}
+
+body.light #popoutbutton:hover {
+    background-color: #b00000;
+}

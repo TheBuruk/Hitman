@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<title>Hitman Roulette</title>
+		<link rel="stylesheet" href="css/HCmini.css" type="text/css">
+		<meta charset="utf-8">		
+	</head>
+	
+	<body>
+		<section id="roulettesection">
+			<div class="selectrow">
+				<select id="missionselect" class="hcselect">
+					<option value="RANDOM">Random Mission</option>
+					<option value="AA">Asylum Aftermath</option>
+					<option value="TMKP">The Meat King's Party</option>
+					<option value="TBB">The Bjarkhov Bomb</option>
+					<option value="BM">Beldingford Manor</option>
+					<option value="RIR">Rendezvous in Rotterdam</option>
+					<option value="DC">Deadly Cargo</option>
+					<option value="TOTT">Traditions of the Trade</option>
+					<option value="SAD">Slaying a Dragon</option>
+					<option value="TWFI">The Wang Fou Incident</option>
+					<option value="TSM">The Seafood Massacre</option>
+					<option value="TLHA">The Lee Hong Assassination</option>
+					<option value="HAH">Hunter and Hunted</option>
+				</select> <br>		
+				<select id="extraselect" class="hcselect">
+					<option value="RANDOM">Random extras</option>
+					<option value="0">No extras</option>
+					<option value="1">1 extra</option>
+					<option value="2">2 extras</option>
+					<option value="3">3 extras</option>
+					<option value="4">4 extras</option>
+				</select>
+				<button class="ui-button" type="button" style="display:inline" onclick="clearAll(),extraVariables(),chooseMission(),extraAmount()">Randomize</button>
+			</div>	
+				<p id="chosenmission"></p>
+				<p id="mainresult"></p>
+				<p id="extra1" class="missionextras"></p>
+				<p id="extra2" class="missionextras"></p>
+				<p id="extra3" class="missionextras"></p>
+				<p id="extra4" class="missionextras"></p>
+				<p id="extra5" class="missionextras"></p>
+				<p id="getshotextra" class="genericextras"></p>
+				<p id="distractionsextra" class="genericextras"></p>
+				<p id="knockoutsextra" class="genericextras"></p>
+				<p id="suitonlyextra" class="genericextras"></p>
+				<input onchange="switchTheme()" type="checkbox" id="theme-switch">
+		</section>
+		
+		<script src="js/roulette.js"></script>
+	</body>
+</html>

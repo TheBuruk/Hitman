@@ -1,0 +1,186 @@
+/* For the popout section. */
+
+* {
+	font-family:sans-serif;
+	transition: background-color 0.4s;
+}
+
+/* Body and main original theme */
+body {
+	background-color: #030607;
+	color: white;                          
+}
+
+.genericextras {
+	color:#4ca9ff;
+}
+
+.missionextras {
+    color: greenyellow;
+} 
+    
+#chosenmission {
+    font-size:18px;
+    font-weight: bold;
+    color:#cc0000;                                           
+}
+
+/* Visual dark-light theme switch for light */
+input#theme-switch {
+    position: absolute;
+	bottom:5px;
+	right:5px;
+    cursor: pointer;
+    appearance: none;
+    width: 80px;
+    height: 40px;
+    background-color: #ededed;
+    border-radius: 20px;
+    box-shadow:
+        inset 5px 5px 5px rgba(255,255,255,0.15),
+        5px 1px 2px rgba(0,0,0,0.25);
+}
+
+input#theme-switch::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    background-color: #323950;
+    border-radius: 40px;
+    transform: scale(0.8);
+    position: absolute;
+    left: 0;
+    transition: left 0.7s, background-image 0.7s;
+    background-image: url('../img/dark-icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    box-shadow:
+        inset 5px 5px 5px rgba(255,255,255,0.15),
+        5px 1px 2px rgba(0,0,0,0.25);
+}
+
+input#theme-switch:checked::after {
+    left: 40px;
+    background-image: url('../img/light-icon.png');
+}
+
+
+/* Turn light mode on when you click */
+body.light {
+	background-color: ivory;
+}
+
+body.light section {
+	color: black;
+}
+
+body.light .missionextras {
+	color: #00a6a6;
+}
+
+body.light .genericextras {
+	color:#0000aa;
+}
+
+
+/* Select menu styling. */
+.hcselect {
+    margin-bottom: 2px;
+	appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: rgba(74, 74, 74, 0.75);
+    color: #ff0000;
+    padding: 10px 40px 10px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 0, 0, 0.4);
+    font-size: 16px;
+    cursor: pointer;
+    background-image: url("../img/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 14px 10px;
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.hc:hover {
+    background-color: rgba(90, 90, 90, 0.85);
+}
+
+.hcselect:focus {
+    outline: none;
+    border-color: #ff0000;
+    box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.3);
+	background-image: url("../img/arrow-up.svg");
+}
+.hcselect option {
+    background-color: #030607;
+    color: #ff0000;
+}
+
+/* Light mode select */
+body.light .hcselect {
+    background-color: #ededed;
+    color: #8a0000;
+    border-color: #8a0000;
+}
+
+body.light .hcselect option {
+    background-color: ivory;
+    color: #8a0000;
+}
+
+/* Class selector for the randomize button. */
+.ui-button,
+button.ui-button {
+    background-color: rgba(74, 74, 74, 0.75);
+    color: #ff0000;
+    padding: 5px 5px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 0, 0, 0.4);
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.ui-button:hover,
+button.ui-button:hover {
+    background-color: #8a0000;
+    color: #ffffff;
+    transform: scaleY(1.1);
+}
+
+.ui-button:focus,
+button.ui-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.35);
+}
+
+/* For light mode buttons. */
+body.light .ui-button {
+    background-color: #8a0000;
+    color: #ffffff;
+}
+
+body.light .ui-button:hover {
+    background-color: #b00000;
+}
+
+
+/* Allow wrapping if space is tight. */
+.selectrow {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
